@@ -6,10 +6,11 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
-import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import wg.kafka.Customer;
 
-public class KafkaAvroProducerV1 {
+import io.confluent.kafka.serializers.KafkaAvroSerializer;
+
+public class KafkaAvroProducerV2 {
 
     public static void main(String[] args) {
         Properties properties = new Properties();
@@ -21,15 +22,14 @@ public class KafkaAvroProducerV1 {
         properties.setProperty("schema.registry.url", "http://127.0.0.1:8081");
 
         KafkaProducer<String, Customer> kafkaProducer = new KafkaProducer<>(properties);
-        String topic = "customer-avro";
+        String topic = "customer-avro-2";
 
         Customer customer = Customer.newBuilder()
-            .setFirstName("John")
+            .setFirstName("New John")
             .setLastName("Doe")
-            .setAge(30)
+            .setAge(60)
             .setHeight(180.0f)
             .setWeight(76.5f)
-            .setAutomatedEmail(false)
             .build();
 
         ProducerRecord<String, Customer> producerRecord = new ProducerRecord<>(

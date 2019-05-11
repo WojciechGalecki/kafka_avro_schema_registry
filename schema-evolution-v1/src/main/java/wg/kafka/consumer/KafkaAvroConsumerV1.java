@@ -1,4 +1,4 @@
-package wg.kafka.avro.consumer;
+package wg.kafka.consumer;
 
 import java.util.Collections;
 import java.util.Properties;
@@ -25,7 +25,7 @@ public class KafkaAvroConsumerV1 {
         properties.setProperty("specific.avro.reader", "true");
 
         KafkaConsumer<String, Customer> kafkaConsumer = new KafkaConsumer<>(properties);
-        String topic = "customer-avro";
+        String topic = "customer-avro-2";
 
         kafkaConsumer.subscribe(Collections.singleton(topic));
 
