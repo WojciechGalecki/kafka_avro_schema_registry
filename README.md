@@ -11,8 +11,8 @@ Simple examples of kafka producers and consumers using apache avro format and sc
 - maven -> lifecycle -> clean
 - maven -> lifecycle -> package
 
-Maven plugin will create them based on avro schema from resources/avro directory.
-Classes will be seen in target directory. 
+  Maven plugin will create them based on avro schema from resources/avro directory.
+  Classes will be seen in target directory. 
 
 3) Run KafkaAvroProducerV1 to generate data based on avro schema in version 1, KafkaAvroProducerV2 for schema v2.
 ConsumerV1 can read data from producer v1 and v2, the same as consumer v2. Both avro schemas are full compatibility!
