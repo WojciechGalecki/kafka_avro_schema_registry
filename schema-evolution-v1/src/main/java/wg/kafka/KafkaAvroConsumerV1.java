@@ -1,4 +1,4 @@
-package wg.kafka.consumer;
+package wg.kafka;
 
 import java.util.Collections;
 import java.util.Properties;
@@ -9,7 +9,6 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
 import io.confluent.kafka.serializers.KafkaAvroDeserializer;
-import wg.kafka.Customer;
 
 public class KafkaAvroConsumerV1 {
 

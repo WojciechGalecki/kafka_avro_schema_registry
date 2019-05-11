@@ -1,12 +1,10 @@
-package wg.kafka.producer;
+package wg.kafka;
 
 import java.util.Properties;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
-
-import wg.kafka.Customer;
 
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 
@@ -30,6 +28,8 @@ public class KafkaAvroProducerV2 {
             .setAge(60)
             .setHeight(180.0f)
             .setWeight(76.5f)
+            .setPhoneNumber("000-111-222")
+            .setEmail("newjohn2@example.com")
             .build();
 
         ProducerRecord<String, Customer> producerRecord = new ProducerRecord<>(

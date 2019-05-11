@@ -1,4 +1,4 @@
-package wg.kafka.producer;
+package wg.kafka;
 
 import java.util.Properties;
 
@@ -7,7 +7,6 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
-import wg.kafka.Customer;
 
 public class KafkaAvroProducerV1 {
 
